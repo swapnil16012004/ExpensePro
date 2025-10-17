@@ -171,7 +171,7 @@ export default function Dashboard() {
               <th className="category">Category</th>
               <th>Amount</th>
               <th>Comments</th>
-              <th>Created At</th>
+              <th>Last Modified</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -181,7 +181,11 @@ export default function Dashboard() {
                 <td>{exp.category}</td>
                 <td>₹{exp.amount}</td>
                 <td>{exp.comments}</td>
-                <td>{new Date(exp.createdAt).toLocaleString()}</td>
+                <td>
+                  {exp.updatedAt
+                    ? new Date(exp.updatedAt).toLocaleString()
+                    : new Date(exp.createdAt).toLocaleString()}
+                </td>
                 <td>
                   <button
                     className="btn"

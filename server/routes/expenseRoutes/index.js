@@ -29,18 +29,31 @@ router.post("/", auth, async (req, res) => {
 
 router.get("/", auth, async (req, res) => {
   const expenses = await Expense.find({ userId: req.userId }).sort({
-    createdAt: -1,
+    updatedAt: -1,
   });
   res.json(expenses);
 });
 
 router.put("/:id", auth, async (req, res) => {
-  const expense = await Expense.findOneAndUpdate(
-    { _id: req.params.id, userId: req.userId },
-    req.body,
-    { new: true }
-  );
-  res.json(expense);
+  try {
+    const expense = await Expense.findOneAndUpdate(
+      { _id: req.params.id, userId: req.userId },
+      {
+        ...req.body,
+        updatedAt: new Date(),
+      },
+      { new: true, runValidators: true }
+    );
+
+    if (!expense) {
+      return res.status(404).json({ error: "Expense not found" });
+    }
+
+    res.json(expense);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
 });
 
 router.delete("/:id", auth, async (req, res) => {
