@@ -155,7 +155,7 @@ export default function Dashboard() {
             onChange={(e) => setComments(e.target.value)}
             placeholder="Comments (optional)"
           />
-          <button type="submit" className="btn btn-primary ExpenseButton">
+          <button type="submit" className="btn btn-info ExpenseButton">
             {editing ? "Update Expense" : "Add Expense"}
           </button>
         </div>

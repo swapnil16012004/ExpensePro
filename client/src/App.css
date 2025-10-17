@@ -40,7 +40,7 @@
 }
 
 .tableHead {
-  background: #007bff;
+  background: #0dcaf0;
   color: #fff;
 }
 
@@ -54,7 +54,6 @@
 }
 
 .ExpenseButton {
-  background: #007bff;
   color: #fff;
   padding: 8px;
   border: none;
