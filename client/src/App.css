@@ -1,0 +1,126 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+
+/* Dashborad page */
+
+.logoutBtn {
+  float: right;
+  margin-bottom: 10px;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dashBoardCover {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.expenseForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.expensesHead {
+  margin-top: 30px;
+}
+
+.expenseTable {
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.tableHead {
+  background: #007bff;
+  color: #fff;
+}
+
+.category {
+  padding: 8px;
+}
+
+.tableRow {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.ExpenseButton {
+  background: #007bff;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  align-self: center;
+  width: 100%;
+}
+
+/* login page */
+
+.loginForm {
+  padding: 4rem;
+}
+
+.formEle {
+  width: 70% !important;
+  margin: auto;
+}
+
+.signUPDiv {
+  align-content: center;
+}
+
+.expensePara {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.loginBtn {
+  color: #fff !important;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 15%;
+  align-self: center;
+}
+
+/* signup page */
+
+.signUPCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signUpBtn {
+  color: #fff !important;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 15%;
+  align-self: center;
+}
+
+.createAcc {
+  align-self: center;
+}
